@@ -47,4 +47,4 @@ const Assistance = () => {
   );
 };
 
-export default privacyPolicy;
+export default Assistance;
