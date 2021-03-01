@@ -1,0 +1,164 @@
+@import "../components/variables";
+
+#contact {
+  margin-top: 190px;
+  height: auto;
+  @include respond-to("lg") {
+    margin-top: 230px;
+  }
+  @include respond-to("sm") {
+    margin-top: 150px;
+  }
+  & > div {
+    margin: 40px 60px;
+    display: flex;
+    @include respond-to("lg") {
+      flex-direction: column;
+    }
+    @include respond-to("md") {
+      margin: 40px 40px;
+    }
+    & > div {
+      border-top: solid thin $color-black;
+      padding-top: 20px;
+      width: 50%;
+      @include respond-to("lg") {
+        width: 100%;
+      }
+      h1 {
+        @include font-lg;
+        font-weight: normal;
+      }
+      span {
+        @include font-xs;
+        display: block;
+        margin-top: 15px;
+      }
+      h2 {
+        @include font-md;
+        font-weight: normal;
+        font-size: 23px;
+      }
+      h4 {
+        @include font-xs;
+        color: $color-orange;
+        font-weight: normal;
+      }
+    }
+    & > div:first-child {
+      display: flex;
+      justify-content: space-between;
+      margin-right: 35px;
+      & > div {
+        width: 50%;
+        & > div:nth-child(2) {
+          margin-top: 60px;
+        }
+        & > div:nth-child(3) {
+          span {
+            &:not(:nth-child(2)) {
+              margin-top: 0px;
+            }
+            line-height: 18px;
+          }
+        }
+        & > div:nth-child(4) {
+          & > a {
+            @include font-xs;
+            display: inline-block;
+            margin-top: 15px;
+            &:hover {
+              @include shadow-hover;
+            }
+          }
+        }
+        & > div:last-child {
+          margin-top: 35px;
+          &::before {
+            content: none;
+          }
+          a {
+            margin-top: 15px;
+          }
+          a {
+            margin-right: 20px;
+            opacity: 0.3;
+            img {
+              height: 20px;
+            }
+          }
+        }
+        & > div {
+          margin-top: 20px;
+          &::before {
+            content: "";
+            width: 15px;
+            height: 1px;
+            margin: 20px 0px;
+            background-color: $color-grey;
+            display: block;
+          }
+        }
+      }
+      & > div:last-child {
+        @include respond-to("lg") {
+          margin-bottom: 70px;
+        }
+        & > div:nth-child(4) {
+          margin-top: 40px;
+        }
+      }
+    }
+    & > div:last-child {
+      @include respond-to("lg") {
+        margin-bottom: 70px;
+      }
+      & > div {
+        & > div {
+          margin-top: 75px;
+          form {
+            display: flex;
+            flex-direction: column;
+            margin-top: 35px;
+            border-bottom: solid thin $color-black;
+            input:last-child {
+              cursor: pointer;
+              border-top: solid thin $color-black;
+              border-right: solid thin $color-black;
+              border-left: solid thin $color-black;
+              float: right;
+              display: flex;
+              justify-content: center;
+              margin-left: auto;
+              width: 85px;
+              padding: 15px 0px;
+              background-color: $color-grey;
+            }
+            input {
+              outline: none;
+              display: flex;
+              width: 100%;
+              border: none;
+              border-top: solid thin $color-black;
+              padding: 15px 0px;
+              @include font-xs;
+              &::placeholder {
+                color: $color-orange;
+              }
+            }
+            textarea {
+              outline: none;
+              border: none;
+              border-top: solid thin $color-black;
+              padding-top: 10px;
+              @include font-xs;
+              &::placeholder {
+                color: $color-orange;
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}

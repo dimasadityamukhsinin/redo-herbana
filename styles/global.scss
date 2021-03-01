@@ -1,0 +1,95 @@
+@import "components/normalize";
+@import "components/variables";
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+main {
+  overflow-x: hidden;
+}
+
+a {
+  text-decoration: none;
+}
+
+.inactive {
+  opacity: 0;
+  display: none;
+  transition: opacity 0.5s;
+}
+
+.control {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  width: 100%;
+  padding: 0 50px;
+  pointer-events: none;
+  z-index: 1;
+  @include respond-to("sm") {
+    padding: 0 30px;
+  }
+  .left_arrow {
+    cursor: pointer;
+    pointer-events: auto;
+    background-image: url("/image/icons/h2_arrow.svg");
+    height: 25px;
+    width: 25px;
+    border: none;
+    outline: none;
+    background-color: transparent;
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center;
+    &:hover {
+      opacity: 0.5;
+      transition: opacity 0.5s;
+    }
+  }
+  .right_arrow {
+    cursor: pointer;
+    pointer-events: auto;
+    background-image: url("/image/icons/h2_arrow.svg");
+    transform: rotate(180deg);
+    height: 25px;
+    width: 25px;
+    border: none;
+    outline: none;
+    background-color: transparent;
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center;
+    &:hover {
+      opacity: 0.5;
+      transition: opacity 0.5s;
+    }
+  }
+}
+
+.swiper-pagination-bullet {
+  border: 1px solid $color-black !important;
+  background: transparent !important;
+  opacity: 1 !important;
+  height: 9px !important;
+  width: 9px !important;
+}
+
+.swiper-pagination-bullets {
+  bottom: 30px !important;
+}
+
+.swiper-pagination-bullet-active {
+  background-color: $color-black !important;
+}
+
+.white-bullet {
+  border: 1px solid $color-white !important;
+  background-color: $color-white !important;
+}
+
+.white-border {
+  border: 1px solid $color-white !important;
+}

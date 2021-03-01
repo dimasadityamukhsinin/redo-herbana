@@ -1,0 +1,30 @@
+[
+    {
+        "title": "Digestive Health",
+        "button": "SHOP KUNYIT",
+        "link": "/product/reliefsari-kunyit",
+        "image": "https://herbana.id/files/product/6/product.png",
+        "background": "https://herbana.id/files/home/products/1.jpg?1531420899"
+    },
+    {
+        "title": "Good Night",
+        "button": "SHOP NOW",
+        "link": "/product/balancemadia-good-night",
+        "image": "https://herbana.id/files/product/32/product.png",
+        "background": "https://herbana.id/files/home/products/4.jpg?1547744384"
+    },
+    {
+        "title": "Daily Immune Support",
+        "button": "SHOP JINTEN HITAM",
+        "link": "/product/reliefsari-jinten-hitam",
+        "image": "https://herbana.id/files/product/10/product.png",
+        "background": "https://herbana.id/files/home/products/2.jpg?1531421283"
+    },
+    {
+        "title": "Breastfeeding Support",
+        "button": "SHOP DAUN KATUK",
+        "link": "/product/reliefsari-daun-katuk",
+        "image": "https://herbana.id/files/product/12/product.png",
+        "background": "https://herbana.id/files/home/products/3.jpg?1531421298"
+    }
+]

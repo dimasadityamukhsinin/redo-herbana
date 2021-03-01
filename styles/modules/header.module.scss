@@ -1,0 +1,22 @@
+@import "../components/variables";
+
+#header {
+  width: 100%;
+  height: 100vh;
+  background-color: $color-green;
+  position: fixed;
+  z-index: 99;
+
+  .progressbar {
+    height: 5px;
+    width: 100%;
+  }
+
+  .filler {
+    height: 100%;
+    background-color: $color-orange;
+    border-radius: inherit;
+    text-align: right;
+    transition: width 1s ease-in-out;
+  }
+}

@@ -1,0 +1,156 @@
+@import "../components/variables";
+
+#footer {
+  height: auto;
+  & > div {
+    margin: 40px 60px;
+    border-top: solid thin $color-black;
+    display: flex;
+    @include respond-to("lg") {
+      flex-direction: column;
+      border-top: solid thin $color-grey;
+    }
+    @include respond-to("md") {
+      margin: 40px 40px;
+    }
+    @include respond-to("sm") {
+      margin: 40px 20px;
+    }
+    .footer_left {
+      display: flex;
+      flex-basis: 60%;
+      position: relative;
+      padding-bottom: 80px;
+      border-bottom: solid thin $color-grey;
+      & > div:first-child {
+        margin-right: 40px;
+      }
+      .footer_link {
+        padding-top: 20px;
+        & > span {
+          font-weight: bold;
+          @include font-xxs-mono;
+        }
+        ul {
+          list-style: none;
+          &::before {
+            content: "";
+            display: block;
+            width: 15px;
+            height: 1px;
+            background-color: $color-grey;
+            margin: 20px 0px;
+          }
+          li {
+            a {
+              @include font-xxs-mono;
+              @include respond-to("lg") {
+                font-weight: bold;
+              }
+              &:hover {
+                @include shadow-hover;
+              }
+            }
+          }
+        }
+      }
+      .footer_copyright {
+        position: absolute;
+        bottom: 15px;
+        @include font-xxs-mono;
+        font-weight: bold;
+        span {
+          font-weight: normal;
+          font-size: 12px;
+        }
+      }
+    }
+    .footer_right {
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+      margin-left: 40px;
+      border-bottom: solid thin #dadbdc;
+      @include respond-to("lg") {
+        margin-left: 0px;
+        flex-direction: row;
+        align-items: flex-end;
+      }
+      @include respond-to("md") {
+        flex-direction: column;
+        align-items: flex-start;
+      }
+      .footer_newsletter {
+        display: flex;
+        flex-direction: column;
+        padding-top: 26px;
+        @include font-xxs-mono;
+        @include respond-to("lg") {
+          margin-bottom: 20px;
+          width: 100%;
+        }
+        & > span:first-child {
+          font-weight: bold;
+          &:after {
+            content: "";
+            display: block;
+            width: 15px;
+            height: 1px;
+            background-color: $color-grey;
+            margin: 20px 0px;
+          }
+        }
+        & > span:nth-child(2) {
+          width: 70%;
+          line-height: 18px;
+          margin-bottom: 20px;
+        }
+        form {
+          display: flex;
+          input:first-child {
+            outline: none;
+            border: none;
+            border-top: solid thin $color-grey;
+            border-bottom: solid thin $color-grey;
+            width: 100%;
+            padding: 15px 0px;
+            opacity: 0.5;
+          }
+          input:last-child {
+            cursor: pointer;
+            border: none;
+            background-color: $color-grey;
+            padding: 15px 40px;
+          }
+        }
+      }
+      .footer_socmed {
+        margin-bottom: 10px;
+        display: flex;
+        @include respond-to("lg") {
+          margin-bottom: 20px;
+          margin-left: 40px;
+        }
+        @include respond-to("md") {
+          margin-left: 0;
+        }
+        a:last-child {
+          @include respond-to("lg") {
+            margin-right: 0;
+          }
+        }
+        a {
+          margin-right: 20px;
+          opacity: 0.3;
+          img {
+            height: 25px;
+          }
+          &:hover {
+            opacity: 1;
+            transition: opacity 0.5s;
+          }
+        }
+      }
+    }
+  }
+}

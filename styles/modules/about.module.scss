@@ -1,0 +1,221 @@
+@import "../components/variables";
+
+#about_1 {
+  margin-top: 190px;
+  position: relative;
+  height: auto;
+  @include respond-to("lg") {
+    margin-top: 230px;
+  }
+  @include respond-to("sm") {
+    margin-top: 150px;
+  }
+  & > div {
+    margin: 40px 60px;
+    border-top: solid thin $color-black;
+    display: flex;
+    @include respond-to("md") {
+      flex-direction: column;
+    }
+    @include respond-to("md") {
+      margin: 40px 40px;
+    }
+    & > div {
+      padding-top: 20px;
+      width: 50%;
+      @include respond-to("md") {
+        width: 100%;
+      }
+      h3 {
+        @include font-sm;
+        font-size: 18px;
+        font-weight: bold;
+        line-height: 30px;
+        padding-right: 35px;
+      }
+      & > p:last-child {
+        margin-bottom: 0px;
+      }
+      & > p {
+        @include font-sm;
+        font-size: 14px;
+        margin-bottom: 30px;
+        line-height: 25px;
+      }
+    }
+  }
+}
+
+#about_2 {
+  height: 600px;
+  background-image: url("/image/about/about_bg.jpg");
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  & > div {
+    width: 100%;
+    height: 100%;
+    padding: 60px;
+    display: flex;
+    justify-content: center;
+    & > div {
+      position: relative;
+      width: 300px;
+      display: flex;
+      align-items: center;
+      text-align: center;
+      & > p {
+        line-height: 22px;
+        letter-spacing: 1px;
+        @include font-sm;
+        color: $color-white;
+        margin-bottom: 40px;
+      }
+      & > div {
+        position: absolute;
+        left: 50%;
+        right: 50%;
+        bottom: 0;
+        background-image: url("/image/icons/about_support_graphic_2.svg");
+        background-size: contain;
+        background-position: center;
+        height: 170px;
+        width: 20px;
+      }
+    }
+  }
+}
+
+#about_3 {
+  height: auto;
+  & > div {
+    height: 100%;
+    padding: 50px;
+    margin: 0px 60px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    @include respond-to("md") {
+      margin: 0px 40px;
+    }
+    & > div:last-child {
+      margin-bottom: 0px;
+    }
+    & > div {
+      width: 250px;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      text-align: center;
+      margin-bottom: 80px;
+      & > img {
+        width: 150px;
+      }
+      & > div {
+        opacity: 0.3;
+        background-image: url("/image/icons/about_support_graphic_2_black.svg");
+        background-size: contain;
+        background-position: center;
+        height: 45px;
+        margin-bottom: 40px;
+      }
+      p {
+        line-height: 22px;
+        letter-spacing: 1px;
+        @include font-sm;
+        font-size: 13px;
+        font-weight: bold;
+      }
+    }
+  }
+}
+
+#about_4 {
+  height: auto;
+  & > div {
+    margin: 40px 60px;
+    border-top: solid thin $color-black;
+    display: flex;
+    @include respond-to("md") {
+      flex-direction: column;
+    }
+    @include respond-to("md") {
+      margin: 40px 40px;
+    }
+    & > div:first-child {
+      padding-right: 35px;
+    }
+    & > div {
+      padding-top: 20px;
+      width: 50%;
+      @include respond-to("md") {
+        width: 100%;
+      }
+      h1 {
+        @include font-sm;
+        font-size: 18px;
+      }
+      h2 {
+        @include font-sm;
+        font-weight: normal;
+        font-size: 18px;
+        line-height: 30px;
+        margin-bottom: 40px;
+      }
+      p:last-child {
+        margin-bottom: 0px;
+      }
+      p {
+        @include font-sm;
+        font-size: 14px;
+        margin-bottom: 30px;
+        line-height: 25px;
+        * {
+          max-width: 100%;
+        }
+      }
+      & > img {
+        width: 100px;
+      }
+    }
+  }
+}
+
+#about_5 {
+  height: auto;
+  & > div {
+    margin: 40px 60px;
+    border-top: solid thin $color-black;
+    display: flex;
+    @include respond-to("md") {
+      flex-direction: column;
+    }
+    @include respond-to("md") {
+      margin: 40px 40px;
+    }
+    & > div:first-child {
+      padding-right: 35px;
+    }
+    & > div {
+      padding-top: 20px;
+      width: 50%;
+      @include respond-to("md") {
+        width: 100%;
+      }
+      ul {
+        list-style: none;
+        li:last-child {
+          margin-bottom: 0px;
+        }
+        li {
+          margin-bottom: 10px;
+          span {
+            @include font-sm;
+            font-size: 14px;
+          }
+        }
+      }
+    }
+  }
+}
