@@ -41,6 +41,16 @@ export const addWhite = () => {
     .forEach((data) => {
       data.classList.add("white");
     });
+  document
+    .querySelectorAll(".navborder > div > div:nth-child(3) > ul > li > ul")
+    .forEach((data) => {
+      data.classList.add("white");
+    });
+  document
+    .querySelectorAll(".navborder > div > div:nth-child(3) > ul > li > ul > li")
+    .forEach((data) => {
+      data.classList.add("black");
+    });
   document.querySelectorAll("#logo_navigation > g > path").forEach((data) => {
     data.classList.add("white");
   });
@@ -95,6 +105,11 @@ export const removeWhite = () => {
   //Nav Border
   document
     .querySelectorAll(".navborder > div > div:nth-child(3) > ul > li > a")
+    .forEach((data) => {
+      data.classList.remove("white");
+    });
+  document
+    .querySelectorAll(".navborder > div > div:nth-child(3) > ul > li > ul")
     .forEach((data) => {
       data.classList.remove("white");
     });

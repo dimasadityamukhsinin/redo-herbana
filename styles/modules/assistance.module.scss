@@ -1,0 +1,441 @@
+@import "../components/variables";
+
+#assistance_wrappper {
+  margin-top: 190px;
+  position: relative;
+  height: auto;
+  @include respond-to("sm") {
+    margin-top: 160px;
+  }
+  & > div {
+    margin: 40px 60px;
+    display: flex;
+    @include respond-to("lg") {
+      flex-direction: column;
+    }
+    @include respond-to("sm") {
+      margin: 40px 20px;
+    }
+    #navAssistance {
+      width: 20%;
+      border-top: solid thin $color-black;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      @include respond-to("lg") {
+        margin-top: 60px;
+        width: 100%;
+      }
+      @include respond-to("sm") {
+        margin-top: 0px;
+      }
+      & > h3 {
+        padding: 20px 0px;
+        @include font-sm;
+      }
+      h4 {
+        @include font-xs;
+        font-weight: normal;
+        letter-spacing: 1px;
+      }
+      & > div {
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+        @include respond-to("lg") {
+          flex-direction: row;
+          flex-wrap: wrap;
+          justify-content: space-between;
+        }
+        & > div {
+          padding: 15px 0px;
+          border-top: solid thin $color-black;
+          width: 100%;
+          display: flex;
+          justify-content: center;
+          @include respond-to("lg") {
+            width: 50%;
+            border-right: solid thin $color-black;
+          }
+          a {
+            opacity: 0.5;
+            &:global(.active) {
+              pointer-events: none;
+              opacity: 1;
+            }
+            &:hover {
+              opacity: 1;
+              transition: opacity 0.5s;
+            }
+          }
+        }
+        & > div:nth-child(2) {
+          border-right: none;
+        }
+        & > div:nth-child(4) {
+          border-right: none;
+        }
+        & > div:nth-child(5) {
+          @include respond-to("lg") {
+            border-bottom: solid thin $color-black;
+          }
+        }
+        & > div:last-child {
+          border-right: none;
+          border-bottom: solid thin $color-black;
+        }
+      }
+    }
+    p {
+      @include font-xxs;
+      font-size: 11px;
+      width: 100%;
+      @include respond-to("sm") {
+        width: 100%;
+      }
+    }
+    #stockist {
+      width: 70%;
+      border-top: solid thin $color-black;
+      margin-left: 120px;
+      margin-bottom: 80px;
+      @include respond-to("lg") {
+        margin-top: 40px;
+        margin-left: 0;
+        width: 100%;
+      }
+      & > h1 {
+        @include font-xlg;
+        font-weight: normal;
+        margin-bottom: 150px;
+      }
+      & > h4 {
+        @include font-xs;
+        letter-spacing: 1px;
+        &::after {
+          content: "";
+          margin: 15px 0px;
+          height: 1px;
+          width: 280px;
+          display: block;
+          background-color: $color-grey;
+        }
+      }
+      & > div {
+        display: flex;
+        justify-content: space-between;
+        flex-wrap: wrap;
+        width: 70%;
+        @include respond-to("sm") {
+          width: 100%;
+        }
+        & > div {
+          margin-top: 60px;
+          width: 40%;
+          & > h4 {
+            @include font-xs;
+            letter-spacing: 1px;
+            &::after {
+              content: "";
+              margin: 15px 0px;
+              height: 1px;
+              width: 100%;
+              display: block;
+              background-color: $color-grey;
+            }
+          }
+          h5 {
+            @include font-xxs;
+            font-size: 11px;
+            line-height: 20px;
+          }
+          & > div {
+            margin-top: 20px;
+            & > p {
+              @include font-xxs;
+              font-size: 11px;
+              line-height: 20px;
+            }
+          }
+        }
+      }
+    }
+    #privacyPolicy {
+      width: 70%;
+      border-top: solid thin $color-black;
+      margin-left: 120px;
+      margin-bottom: 80px;
+      @include respond-to("lg") {
+        margin-top: 40px;
+        margin-left: 0;
+        width: 100%;
+      }
+      & > h1 {
+        @include font-xlg;
+        font-weight: normal;
+        margin-bottom: 130px;
+      }
+      p {
+        margin-top: 20px;
+        width: 100%;
+        line-height: 18px;
+      }
+      & > div {
+        width: 50%;
+        @include respond-to("lg") {
+          width: 80%;
+        }
+        @include respond-to("sm") {
+          width: 100%;
+        }
+      }
+    }
+    #termsConditions {
+      width: 70%;
+      border-top: solid thin $color-black;
+      margin-left: 120px;
+      margin-bottom: 80px;
+      @include respond-to("lg") {
+        margin-top: 40px;
+        margin-left: 0;
+        width: 100%;
+      }
+      & > h1 {
+        @include font-xlg;
+        font-weight: normal;
+        margin-bottom: 130px;
+      }
+      p {
+        margin-top: 20px;
+        width: 100%;
+        line-height: 18px;
+      }
+      & > div {
+        width: 50%;
+        @include respond-to("lg") {
+          width: 80%;
+        }
+        @include respond-to("sm") {
+          width: 100%;
+        }
+      }
+    }
+    #faq {
+      width: 70%;
+      border-top: solid thin $color-black;
+      margin-left: 120px;
+      margin-bottom: 80px;
+      @include respond-to("lg") {
+        margin-top: 40px;
+        margin-left: 0;
+        width: 100%;
+      }
+      & > h1 {
+        @include font-xlg;
+        font-weight: normal;
+        margin-bottom: 150px;
+      }
+      & > div {
+        width: 50%;
+        @include respond-to("lg") {
+          width: 80%;
+        }
+        @include respond-to("sm") {
+          width: 100%;
+        }
+        & > div {
+          margin-top: 60px;
+          & > p {
+            @include font-xxs;
+            font-size: 11px;
+            line-height: 20px;
+          }
+          & > h4 {
+            @include font-xs;
+            letter-spacing: 1px;
+            &::after {
+              content: "";
+              margin: 15px 0px;
+              height: 1px;
+              width: 280px;
+              display: block;
+              background-color: $color-grey;
+            }
+          }
+        }
+      }
+    }
+    #shippingReturn {
+      width: 70%;
+      border-top: solid thin $color-black;
+      margin-left: 120px;
+      margin-bottom: 80px;
+      @include respond-to("lg") {
+        margin-top: 40px;
+        margin-left: 0;
+        width: 100%;
+      }
+      & > h1 {
+        @include font-xlg;
+        font-weight: normal;
+        margin-bottom: 150px;
+      }
+      & > div {
+        width: 50%;
+        @include respond-to("lg") {
+          width: 80%;
+        }
+        @include respond-to("sm") {
+          width: 100%;
+        }
+        & > div {
+          margin-top: 60px;
+          & > p {
+            @include font-xxs;
+            font-size: 11px;
+            line-height: 20px;
+            a {
+              @include font-xxs;
+              font-size: 11px;
+              opacity: 0.5;
+              margin-left: 5px;
+              &:hover {
+                opacity: 1;
+                transition: opacity 0.5s;
+              }
+            }
+          }
+          & > h4 {
+            @include font-xs;
+            letter-spacing: 1px;
+            &::after {
+              content: "";
+              margin: 15px 0px;
+              height: 1px;
+              width: 280px;
+              display: block;
+              background-color: $color-grey;
+            }
+          }
+        }
+      }
+    }
+    #press {
+      width: 70%;
+      border-top: solid thin $color-black;
+      margin-left: 120px;
+      margin-bottom: 80px;
+      @include respond-to("lg") {
+        margin-top: 40px;
+        margin-left: 0;
+        width: 100%;
+      }
+      & > h1 {
+        @include font-xlg;
+        font-weight: normal;
+        margin-bottom: 120px;
+      }
+      & > div {
+        & > div {
+          width: 70%;
+          margin-top: 60px;
+          @include respond-to("lg") {
+            width: 90%;
+          }
+          @include respond-to("sm") {
+            width: 100%;
+          }
+          & > p {
+            @include font-xxs;
+            font-size: 11px;
+            line-height: 20px;
+            a {
+              @include font-xxs;
+              font-size: 11px;
+              opacity: 0.5;
+              margin-left: 5px;
+              &:hover {
+                opacity: 1;
+                transition: opacity 0.5s;
+              }
+            }
+          }
+          form {
+            margin-top: 40px;
+            & > span {
+              @include font-xs;
+              color: $color-red;
+              font-weight: bold;
+            }
+            & > div {
+              display: flex;
+              justify-content: space-between;
+              flex-wrap: wrap;
+              & > div {
+                display: flex;
+                flex-direction: column;
+                width: 45%;
+                span {
+                  margin-top: 25px;
+                  margin-bottom: 5px;
+                  @include font-xs;
+                  opacity: 0.3;
+                  font-weight: bold;
+                }
+                input {
+                  outline: none;
+                  height: 28px;
+                  border: solid thin $color-black;
+                }
+                select {
+                  outline: none;
+                  height: 28px;
+                  padding: 0 10px;
+                  border: solid thin $color-black;
+                  @include font-xs;
+                  font-weight: bold;
+                }
+                textarea {
+                  outline: none;
+                  border: solid thin $color-black;
+                }
+              }
+              & > div:nth-child(3) {
+                width: 100%;
+              }
+              & > div:last-child {
+                width: 100%;
+                & > div {
+                  display: flex;
+                  justify-content: center;
+                  @include respond-to("sm") {
+                    justify-content: flex-start;
+                  }
+                  input {
+                    cursor: pointer;
+                    margin-top: 60px;
+                    border: none;
+                    outline: none;
+                    background-color: $color-grey;
+                    border-top: solid thin $color-black;
+                    border-bottom: solid thin $color-black;
+                    @include font-xs;
+                    font-weight: bold;
+                    width: 270px;
+                    height: 40px;
+                    @include respond-to("sm") {
+                      width: 220px;
+                    }
+                    &:hover {
+                      @include shadow-hover;
+                    }
+                  }
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}

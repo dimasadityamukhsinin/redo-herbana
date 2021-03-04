@@ -1,9 +1,13 @@
 import styles from "styles/modules/about.module.scss";
+import Head from 'next/head';
 
 const About = () => {
   return (
     <>
       <section id={styles.about_1}>
+        <Head>
+          <title>About - Herbana</title>
+        </Head>
         <div>
           <div>
             <h3>

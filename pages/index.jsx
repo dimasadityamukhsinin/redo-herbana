@@ -43,6 +43,21 @@ export default function Home() {
     });
 
     if (position > 140) {
+      document
+        .querySelectorAll(".navborder > div > div:nth-child(3) > ul > li > ul")
+        .forEach((data) => {
+          data.classList.remove("black");
+        });
+      document
+        .querySelectorAll(".navborder > div > div:nth-child(3) > ul > li > ul")
+        .forEach((data) => {
+          data.classList.remove("white");
+        });
+      document
+        .querySelectorAll(".navborder > div > div:nth-child(3) > ul > li > ul > li")
+        .forEach((data) => {
+          data.classList.remove("black");
+        });
       if (document.querySelectorAll(".infoborder").length > 0) {
         if (
           document
@@ -69,6 +84,13 @@ export default function Home() {
     if (position < 140) {
       if (color === "white") {
         document
+          .querySelectorAll(
+            ".navborder > div > div:nth-child(3) > ul > li > ul"
+          )
+          .forEach((data) => {
+            data.classList.remove("black");
+          });
+        document
           .querySelectorAll(".swiper-pagination-bullet")
           .forEach((data) => {
             data.classList.add("white-border");
@@ -76,13 +98,20 @@ export default function Home() {
         document
           .querySelector(".swiper-pagination-bullet-active")
           .classList.add("white-bullet");
-        console.log(document.getElementsByClassName("discborder")[0])
+        console.log(document.getElementsByClassName("discborder")[0]);
         document.getElementsByClassName("discborder")[0].classList.add("white");
         document.getElementsByClassName("infoborder")[0].classList.add("white");
         document.getElementsByClassName("navborder")[0].classList.add("white");
 
         addWhite();
       } else {
+        document
+          .querySelectorAll(
+            ".navborder > div > div:nth-child(3) > ul > li > ul"
+          )
+          .forEach((data) => {
+            data.classList.add("black");
+          });
         document
           .querySelectorAll(".swiper-pagination-bullet")
           .forEach((data) => {

@@ -11,39 +11,25 @@ const Footer = () => {
             <span>GENERAL</span>
             <ul>
               <li>
-                <Link href="/account">
-                  <a>Account</a>
-                </Link>
+                <a href="/account">Account</a>
               </li>
               <li>
-                <Link href="/about">
-                  <a>About</a>
-                </Link>
+                <a href="/about">About</a>
               </li>
               <li>
-                <Link href="/shop">
-                  <a>Shop</a>
-                </Link>
+                <a href="/shop">Shop</a>
               </li>
               <li>
-                <Link href="/effortlessly-possible">
-                  <a>Effortlessly-Possible</a>
-                </Link>
+                <a href="/effortlessly-possible">Effortlessly-Possible</a>
               </li>
               <li>
-                <Link href="/news">
-                  <a>News</a>
-                </Link>
+                <a href="/news">News</a>
               </li>
               <li>
-                <Link href="/journal">
-                  <a>Journal</a>
-                </Link>
+                <a href="/journal">Journal</a>
               </li>
               <li>
-                <Link href="/contact">
-                  <a>Contact</a>
-                </Link>
+                <a href="/contact">Contact</a>
               </li>
             </ul>
           </div>
@@ -51,34 +37,22 @@ const Footer = () => {
             <span>ASSISTANCE</span>
             <ul>
               <li>
-                <Link href="/assistance/stockist">
-                  <a>Store & stockist</a>
-                </Link>
+                <a href="/assistance/stockist">Store & stockist</a>
               </li>
               <li>
-                <Link href="/assistance/privacy-policy">
-                  <a>Privacy Policy</a>
-                </Link>
+                <a href="/assistance/privacy-policy">Privacy Policy</a>
               </li>
               <li>
-                <Link href="/assistance/terms-conditions">
-                  <a>Terms & Conditions</a>
-                </Link>
+                <a href="/assistance/terms-conditions">Terms & Conditions</a>
               </li>
               <li>
-                <Link href="/assistance/faq">
-                  <a>FAQ & Help</a>
-                </Link>
+                <a href="/assistance/faq">FAQ & Help</a>
               </li>
               <li>
-                <Link href="/assistance/shipping-return">
-                  <a>Shipping & Returns</a>
-                </Link>
+                <a href="/assistance/shipping-return">Shipping & Returns</a>
               </li>
               <li>
-                <Link href="/assistance/press">
-                  <a>Press</a>
-                </Link>
+                <a href="/assistance/press">Press</a>
               </li>
             </ul>
           </div>

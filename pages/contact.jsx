@@ -1,9 +1,13 @@
 import styles from "styles/modules/contact.module.scss";
+import Head from 'next/head';
 
 const Contact = () => {
   return (
     <>
       <section id={styles.contact}>
+        <Head>
+          <title>Contact - Herbana</title>
+        </Head>
         <div>
           <div>
             <div>
