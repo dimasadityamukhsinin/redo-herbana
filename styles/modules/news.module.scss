@@ -1,0 +1,174 @@
+@import "../components/variables";
+
+#news {
+  margin-top: 190px;
+  margin-bottom: 80px;
+  height: auto;
+  @include respond-to("lg") {
+    margin-top: 230px;
+  }
+  @include respond-to("sm") {
+    margin-top: 150px;
+  }
+  & > div:first-child {
+    margin: 40px 60px;
+    display: flex;
+    justify-content: space-between;
+    @include respond-to("md") {
+      flex-direction: column;
+      margin: 40px 40px;
+    }
+    h1 {
+      @include font-xlg;
+      margin: 0;
+      margin-top: 20px;
+    }
+    & > div:first-child {
+      display: flex;
+      border-top: solid thin $color-black;
+      width: 62%;
+      @include respond-to("md") {
+        width: 100%;
+        justify-content: center;
+        border: none;
+      }
+    }
+    #filterYear {
+      border-top: solid thin $color-black;
+      width: 33%;
+      display: flex;
+      @include respond-to("md") {
+        width: 100%;
+        margin: 40px 0px;
+      }
+      & > div {
+        width: 50%;
+        position: relative;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        padding: 15px 20px;
+        @include respond-to("md") {
+          padding: 10px 20px;
+        }
+        span {
+          margin-bottom: 11px;
+          @include font-xs-mono;
+          opacity: 0.3;
+          font-weight: bold;
+          @include respond-to("md") {
+            margin-bottom: 5px;
+          }
+        }
+        button {
+          width: 100%;
+          display: flex;
+          justify-content: space-between;
+          align-items: center;
+          background: transparent;
+          @include font-sm;
+          &:global(.active) {
+            transform: rotate(-180deg);
+            transition: all 0.4s;
+          }
+          &:hover {
+            @include shadow-hover;
+          }
+        }
+        ul {
+          position: absolute;
+          bottom: -100%;
+          opacity: 0;
+          &:global(.active) {
+            @include shadow-hover;
+          }
+        }
+      }
+      .year {
+        border-right: solid thin $color-black;
+        border-bottom: solid thin $color-black;
+      }
+      .month {
+        display: none;
+      }
+      .sort {
+        border-bottom: solid thin $color-black;
+      }
+    }
+  }
+  & > div:nth-child(2) {
+    margin: 0 auto;
+    width: 60%;
+    margin-top: 80px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    & > a {
+      width: calc((100% - 110px) / 2);
+      border: solid thin $color-grey;
+      &:hover {
+        @include shadow-hover;
+      }
+      img {
+        padding: 30px 0px;
+        width: 100%;
+        height: 100%;
+      }
+      & > div:first-child {
+        padding: 10px 40px;
+        border-bottom: solid thin $color-grey;
+        background-color: $color-skin;
+        span {
+          @include font-xs;
+        }
+        span:first-child {
+          padding-right: 10px;
+          margin-right: 10px;
+          border-right: solid thin $color-black;
+        }
+      }
+      & > div:last-child {
+        padding: 20px 40px;
+        & > span {
+          @include font-xs;
+          color: $color-author;
+          display: block;
+          padding-bottom: 15px;
+        }
+        & > p {
+          @include font-xs;
+          line-height: 18px;
+          & > span {
+            padding-left: 5px;
+            display: inline;
+            @include font-xs;
+            color: $color-author;
+          }
+        }
+      }
+    }
+  }
+  & > div:last-child {
+    width: 20%;
+    margin: 10px auto;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    .page {
+      @include font-xs;
+      &:hover {
+        @include shadow-hover;
+      }
+    }
+    .arrow {
+      img {
+        width: 7px;
+        opacity: 0.5;
+        &:hover {
+          opacity: 1;
+          transition: opacity 0.5s;
+        }
+      }
+    }
+  }
+}
