@@ -4,7 +4,6 @@ import FilterYear from "@/components/parts/FilterYear";
 import newsData from "../newsData.example.json";
 
 const news = () => {
-
   const pageNumbers = [];
 
   for (let i = 1; i <= Math.ceil(newsData.length / 6); i++) {

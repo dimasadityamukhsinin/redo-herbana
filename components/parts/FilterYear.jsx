@@ -1,4 +1,4 @@
-import styles from "styles/modules/news.module.scss";
+import styles from "styles/modules/filterYear.module.scss";
 import ArrowLink from "../icons/ArrowLink";
 
 const FilterYear = () => {
