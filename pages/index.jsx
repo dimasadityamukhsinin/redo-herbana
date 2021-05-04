@@ -54,7 +54,9 @@ export default function Home() {
           data.classList.remove("white");
         });
       document
-        .querySelectorAll(".navborder > div > div:nth-child(3) > ul > li > ul > li")
+        .querySelectorAll(
+          ".navborder > div > div:nth-child(3) > ul > li > ul > li"
+        )
         .forEach((data) => {
           data.classList.remove("black");
         });
@@ -266,15 +268,15 @@ export default function Home() {
                   className={`${styles.imageSlider} imageSlider`}
                   key={index}
                 >
-                  <img src={data.image} alt="a" />
+                  <img src={data.background} alt={data.title} />
                 </div>
                 <div className={`${styles.btnSlider} btnSlider`}>
                   <div>
                     {data.title ? (
                       <span>Introducing Balance Madia Cold Ease</span>
                     ) : null}
-                    <Link href={data.url}>
-                      <a>{data.titleButton}</a>
+                    <Link href={data.slide_link}>
+                      <a>{data.button_text}</a>
                     </Link>
                   </div>
                 </div>

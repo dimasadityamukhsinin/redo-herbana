@@ -1,47 +1,47 @@
 [
     {
-        "image": "https://herbana.id/files/home/slides/46.jpg?1593004061",
+        "background": "https://herbana.id/files/home/slides/46.jpg?1593004061",
         "color": "white",
         "title": "Introducing Balance Madia Cold Ease",
-        "titleButton": "SHOP NOW",
-        "url": "/product/balancemadia-cold-ease"
+        "button_text": "SHOP NOW",
+        "slide_link": "/product/balancemadia-cold-ease"
     },
     {
-        "image": "https://herbana.id/files/home/slides/47.jpg?1544461295",
+        "background": "https://herbana.id/files/home/slides/47.jpg?1544461295",
         "color": "black",
         "title": "Introducing Balance Madia Good Night",
-        "titleButton": "SHOP NOW",
-        "url": "/product/balancemadia-good-night"
+        "button_text": "SHOP NOW",
+        "slide_link": "/product/balancemadia-good-night"
     },
     {
-        "image": "https://herbana.id/files/home/slides/42.jpg?1537500033",
+        "background": "https://herbana.id/files/home/slides/42.jpg?1537500033",
         "color": "black",
-        "titleButton": "SHOP NOW",
-        "url": "/shop"
+        "button_text": "SHOP NOW",
+        "slide_link": "/shop"
     },
     {
-        "image": "https://herbana.id/files/home/slides/41.jpg?1537500043",
+        "background": "https://herbana.id/files/home/slides/41.jpg?1537500043",
         "color": "white",
-        "titleButton": "LEARN MORE",
-        "url": "/about"
+        "button_text": "LEARN MORE",
+        "slide_link": "/about"
     },
     {
-        "image": "https://herbana.id/files/home/slides/32.jpg?1537500074",
+        "background": "https://herbana.id/files/home/slides/32.jpg?1537500074",
         "color": "black",
-        "titleButton": "READ JOURNAL",
-        "url": "/journal"
+        "button_text": "READ JOURNAL",
+        "slide_link": "/journal"
     },
     {
-        "image": "https://herbana.id/files/home/slides/67.jpg?1603286356",
+        "background": "https://herbana.id/files/home/slides/67.jpg?1603286356",
         "color": "black",
-        "titleButton": "SHOP NOW",
+        "button_text": "SHOP NOW",
         "title": "Introducing Balance Madia Immusupport",
-        "url": "/product/herbana-balance-madia-immu-support"
+        "slide_link": "/product/herbana-balance-madia-immu-support"
     },
     {
-        "image": "https://herbana.id/files/home/slides/60.jpg?1597092349",
+        "background": "https://herbana.id/files/home/slides/60.jpg?1597092349",
         "color": "white",
-        "titleButton": "SHOP NOW",
-        "url": "/product/reliefsari-meniran"
+        "button_text": "SHOP NOW",
+        "slide_link": "/product/reliefsari-meniran"
     }
 ]
