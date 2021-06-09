@@ -1,0 +1,80 @@
+@import "../components/variables";
+
+#filterShop {
+  border-top: solid thin $color-black;
+  width: 100%;
+  display: flex;
+  @include respond-to("md") {
+    width: 100%;
+    margin: 40px 0px;
+  }
+  @include respond-to("sm") {
+    flex-direction: column;
+  }
+  & > div {
+    width: 50%;
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    padding: 15px 20px;
+    border-bottom: solid thin $color-black;
+    @include respond-to("md") {
+      padding: 10px 20px;
+    }
+    @include respond-to("sm") {
+      width: 100%;
+    }
+    span {
+      margin-bottom: 11px;
+      @include font-xs-mono;
+      opacity: 0.3;
+      font-weight: bold;
+      @include respond-to("md") {
+        margin-bottom: 5px;
+      }
+    }
+    button {
+      width: 100%;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      background: transparent;
+      @include font-sm;
+      &:global(.active) {
+        transform: rotate(-180deg);
+        transition: all 0.4s;
+      }
+      &:hover {
+        @include shadow-hover;
+      }
+    }
+    ul {
+      position: absolute;
+      bottom: -100%;
+      opacity: 0;
+      &:global(.active) {
+        @include shadow-hover;
+      }
+    }
+  }
+  & > div:not(:last-child) {
+      border-right: solid thin $color-black;
+      @include respond-to("sm") {
+        border-right: 0px;
+      }
+  }
+  // .year {
+  //   border-right: solid thin $color-black;
+  //   border-bottom: solid thin $color-black;
+  //   @include respond-to("sm") {
+  //     border-right: 0px;
+  //   }
+  // }
+  // .month {
+  //   display: none;
+  // }
+  // .sort {
+  //   border-bottom: solid thin $color-black;
+  // }
+}
