@@ -34,7 +34,7 @@
         margin-bottom: 5px;
       }
     }
-    button {
+    &>button {
       width: 100%;
       display: flex;
       justify-content: space-between;
@@ -45,14 +45,40 @@
         transform: rotate(-180deg);
         transition: all 0.4s;
       }
-      &:hover {
-        @include shadow-hover;
-      }
     }
     ul {
+      list-style: none;
       position: absolute;
-      bottom: -100%;
+      left: 0;
+      width: 100%;
+      height: auto;
+      max-height: calc(100vh - 250px);
+      top: 101%;
       opacity: 0;
+      transition: opacity .3s;
+      padding: 5px 0;
+      border: $color-black solid 1px;
+      border-top: none;
+      letter-spacing: .1em;
+      font-size: 14px;
+      background: rgba(255,255,255,.9);
+
+      li {
+        padding: 7px 20px;
+        text-transform: uppercase;
+        button {
+          width: 100%;
+          background: none;
+          @include font-sm;
+          color: $color-grey;
+          transition: color .2s;
+          text-align: left;
+          &:hover {
+            color: $color-black;
+          }
+        }
+      }
+
       &:global(.active) {
         @include shadow-hover;
       }

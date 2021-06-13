@@ -1,17 +1,28 @@
+import { useState } from "react";
 import styles from "styles/modules/filterShop.module.scss";
 import ArrowLink from "../icons/ArrowLink";
 
 const FilterShop = () => {
+  const [click, setClick] = useState(false);
+
   return (
     <div id={styles.filterShop}>
       <div className={styles.filter_block}>
         <span>
           <i>Ingredients</i>
         </span>
-        <button>
+        <button onClick={() => {
+          if(!click){
+            setClick(true);
+            document.getElementById("ingredients").style.opacity = 1;
+          }else {
+            setClick(false);
+            document.getElementById("ingredients").removeAttribute("style")
+          }
+        }}>
           ALL <ArrowLink />
         </button>
-        <ul>
+        <ul id="ingredients">
           <li>
             <button>ALL</button>
           </li>
@@ -30,10 +41,20 @@ const FilterShop = () => {
         <span>
           <i>Functions</i>
         </span>
-        <button>
+        <button onClick={() => {
+          if(!click){
+            setClick(true);
+            document.getElementById("functions").style.opacity = 1;
+          }else {
+            setClick(false);
+            document.getElementById("functions").removeAttribute("style")
+            document.getElementById("series").removeAttribute("style")
+            document.getElementById("sort").removeAttribute("style")
+          }
+        }}>
           ALL <ArrowLink />
         </button>
-        <ul>
+        <ul id="functions">
           <li>
             <button>ALL</button>
           </li>
@@ -52,10 +73,21 @@ const FilterShop = () => {
         <span>
           <i>Series</i>
         </span>
-        <button>
+        <button onClick={() => {
+          if(!click){
+            setClick(true);
+            document.getElementById("series").style.opacity = 1;
+          }else {
+            setClick(false);
+            document.getElementById("series").removeAttribute("style")
+            document.getElementById("functions").removeAttribute("style")
+            document.getElementById("series").removeAttribute("style")
+            document.getElementById("sort").removeAttribute("style")
+          }
+        }}>
           ALL <ArrowLink />
         </button>
-        <ul>
+        <ul id="series">
           <li>
             <button>ALL</button>
           </li>
@@ -74,8 +106,19 @@ const FilterShop = () => {
         <span>
           <i>Sort By</i>
         </span>
-        <button>NEWEST <ArrowLink /></button>
-        <ul>
+        <button onClick={() => {
+          if(!click){
+            setClick(true);
+            document.getElementById("sort").style.opacity = 1;
+          }else {
+            setClick(false);
+            document.getElementById("sort").removeAttribute("style")
+            document.getElementById("functions").removeAttribute("style")
+            document.getElementById("series").removeAttribute("style")
+            document.getElementById("ingredients").removeAttribute("style")
+          }
+        }}>NEWEST <ArrowLink /></button>
+        <ul id="sort">
           <li>
             <button>NEWEST</button>
           </li>
